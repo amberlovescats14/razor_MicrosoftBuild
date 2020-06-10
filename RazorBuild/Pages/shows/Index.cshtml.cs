@@ -9,9 +9,10 @@ namespace RazorBuild.Pages.shows
 {
     public class IndexModel : PageModel
     {
+        public List<Show> shows { get; set; }
         public void OnGet()
         {
-
+            this.shows = DataService.GetShows();
         }
     }
 }
